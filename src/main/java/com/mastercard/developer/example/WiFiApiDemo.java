@@ -119,7 +119,7 @@ public class WiFiApiDemo {
 			System.out.println("Parsed Response---------------");
 			System.out.println(result);
 		} catch (Exception e) {
-			System.err.println("Exception when calling Registration");
+			System.err.println("Exception when calling wifi hotspots");
 			e.printStackTrace();
 		}
 	}

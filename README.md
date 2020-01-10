@@ -159,7 +159,11 @@ loyalty-benefits-support@mastercard.flowdock.com
 - Command line example to run the application: 
     - `java -jar target/loyalty-wifi-client-1.0.0.jar hotspot` here the application runs only hotspot feature. if you want to run more than one feature then specify the features with comma separated. Eg: `java -jar target/loyalty-wifi-client-1.0.0.jar hotspot,registration,error` here it executes only these 3 features.You can remove the argument to run all the features Eg: `java -jar target/loyalty-wifi-client-1.0.0.jar`. If you want to run the feature one by one then execute the command `java -jar target/loyalty-wifi-client-1.0.0.jar hotspot` then again run the command with different feature `java -jar target/loyalty-wifi-client-1.0.0.jar registration` and so on.
     
-if you would like to test this in Sandbox environment please contact Mastercard representative to set up you or your organization in this environment because if this does not happen the authorization fails in the Loyalty Wifi Service API. All the URLs have a prefix `reference` in this reference application for all resources of Loyalty Wifi Service API so that it deals with sample data. You need to remove this `reference` word from the URLs when testing against real data. Eg: `/loyalty/wifi/reference` just for reference application and `/loyalty/wifi` to test against real data. 
+# Sandbox Testing
+
+If you would like to test this in Sandbox environment please contact Mastercard representative to set up you or your organization in this environment because if this does not happen the authorization fails in the Loyalty Wifi Service API. All the URLs have a prefix `reference` in this reference application for all resources of Loyalty Wifi Service API so that it deals with sample data. You need to remove this `reference` word from the URLs when testing against real data. Eg: `/loyalty/wifi/reference` just for reference application and `/loyalty/wifi` to test against real data.
+
+While testing the application with a `reference(/loyalty/wifi/reference)` url you need to send the exact inputs that are used in this reference application to get the desired response otherwise the mock returns an error with a message 'the request does not match'.
     
  
 Find the [service documentation](https://developer.mastercard.com/documentation/loyalty-wifi) for more information. 
